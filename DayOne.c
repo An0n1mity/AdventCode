@@ -2,7 +2,7 @@
  #include <stdlib.h>
 
 int main(void) {
-	FILE* fp = fopen("input.txt", "r");
+	FILE* fp = fopen("input_one.txt", "r");
 	int nb_array[1000];
 	if (fp == NULL) {
 		perror("Unable to open file!");
