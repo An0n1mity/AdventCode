@@ -12,7 +12,7 @@ int main(void) {
 	}
 
 	char chunk[128], min_array[10], max_array[10], pass_array[30], letter;
-	int nb_pass = 0, nb = 0;
+	int nb_pass = 0;
 
 	while (fgets(chunk, sizeof(chunk), fp) != NULL) {
 		int i = 0, min = 0, max = 0, nb_letter = 0;
@@ -40,15 +40,14 @@ int main(void) {
 				i = 0;
 			}
 
-			if (minimal) {
+			if (minimal) 
 				min_array[i] = chunk[j];
-			}
-			if (maximal) {
+			
+			if (maximal) 
 				max_array[i] = chunk[j];
-			}
-			if (password) {
+			
+			if (password) 
 				pass_array[i] = chunk[j];
-			}
 			i++;
 		}
 
