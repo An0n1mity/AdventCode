@@ -129,6 +129,6 @@ int main(void) {
 								}
 								printf("Passports : %d\n", nb_passeports);
 
-
+				
 								fclose(fp);
 }
