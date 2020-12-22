@@ -19,22 +19,18 @@ int main(void) {
         while (fgets(chunk, sizeof(chunk), fp) != NULL) {
           total_row = 127; total_column = 7; seat_row = 0; seat_column = 0; row_start_index = 0; row_stop_index = total_row; column_start_index = 0; column_stop_index = total_column;
           for (int i = 0; i < 10; i++) {
-            if (chunk[i] == 'F'){
+            if (chunk[i] == 'F')
               row_stop_index = ((row_start_index + row_stop_index + 1) / 2) - 1;
-              last_row = 'F';
-            }
-            else if (chunk[i] == 'B'){
+             
+            else if (chunk[i] == 'B')
               row_start_index = (row_start_index + row_stop_index + 1) / 2;
-              last_row = 'B';
-            }
-            if (chunk[i] == 'R'){
+             
+            if (chunk[i] == 'R')
               column_start_index = (column_start_index + column_stop_index + 1) / 2;
-              last_column = 'R';
-            }
-            else if (chunk[i] == 'L'){
+              
+            else if (chunk[i] == 'L')
               column_stop_index = ((column_start_index + column_stop_index + 1) / 2) - 1 ;
-              last_column = 'L';
-            }
+             
           }
 
             seat_row = row_start_index;
